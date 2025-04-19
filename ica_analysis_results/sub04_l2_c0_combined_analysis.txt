@@ -23,3 +23,5 @@ Estimated HR: 112.5 bpm
 Correlation with Fetal ECG:    r = -0.004
 Correlation with Maternal ECG: r = -0.004
 
+Selected Fetal Component:    3
+Selected Maternal Component: 2
