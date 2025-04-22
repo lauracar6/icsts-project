@@ -1,0 +1,15 @@
+{
+    "ECG_Rate_Mean": 107.77794227682125,
+    "HRV_SDNN": 10.218513669987674,
+    "HRV_RMSSD": 14.826358134160529,
+    "HRV_pNN50": 0.0,
+    "ECG_QRS_Duration": 76.6778398510242,
+    "ECG_QT_Interval": NaN,
+    "ECG_PR_Interval": 40.343283582089555,
+    "Flags": [
+        "Could not calculate QT Interval - insufficient peak matching",
+        "Maternal tachycardia (HR > 100 bpm)"
+    ],
+    "subject_type": "maternal",
+    "filename": "sub01_l5_c0_combined_cleaned_mecg.npy"
+}

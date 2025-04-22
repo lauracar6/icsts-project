@@ -1,0 +1,14 @@
+{
+    "ECG_Rate_Mean": 128.11259033340326,
+    "HRV_SDNN": 11.048584623293166,
+    "HRV_RMSSD": 15.881220549573657,
+    "HRV_pNN50": 0.0,
+    "ECG_QRS_Duration": 121.37089201877934,
+    "ECG_QT_Interval": -172.12698412698413,
+    "ECG_PR_Interval": 125.57364341085271,
+    "Flags": [
+        "Prolonged QRS duration (Possible conduction issue)"
+    ],
+    "subject_type": "fetal",
+    "filename": "sub06_l3_c0_combined_cleaned_fecg.npy"
+}

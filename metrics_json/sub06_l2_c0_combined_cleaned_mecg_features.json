@@ -1,0 +1,15 @@
+{
+    "ECG_Rate_Mean": 52.130338789873264,
+    "HRV_SDNN": 43.48668940351981,
+    "HRV_RMSSD": 61.94120743329576,
+    "HRV_pNN50": 54.054054054054056,
+    "ECG_QRS_Duration": 90.42471042471043,
+    "ECG_QT_Interval": NaN,
+    "ECG_PR_Interval": 153.65250965250965,
+    "Flags": [
+        "Could not calculate QT Interval - insufficient peak matching",
+        "Maternal bradycardia (HR < 60 bpm)"
+    ],
+    "subject_type": "maternal",
+    "filename": "sub06_l2_c0_combined_cleaned_mecg.npy"
+}

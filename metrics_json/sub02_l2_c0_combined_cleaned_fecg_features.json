@@ -1,0 +1,14 @@
+{
+    "ECG_Rate_Mean": 120.57086801312116,
+    "HRV_SDNN": 12.593227277659114,
+    "HRV_RMSSD": 17.966635745180564,
+    "HRV_pNN50": 1.8302828618968388,
+    "ECG_QRS_Duration": 74.6955074875208,
+    "ECG_QT_Interval": NaN,
+    "ECG_PR_Interval": 54.75333333333333,
+    "Flags": [
+        "Could not calculate QT Interval - insufficient peak matching"
+    ],
+    "subject_type": "fetal",
+    "filename": "sub02_l2_c0_combined_cleaned_fecg.npy"
+}

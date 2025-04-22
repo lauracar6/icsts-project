@@ -39,7 +39,7 @@ st.title("🔬 ECG Signal Diagnostic Dashboard")
 # Sidebar selections
 st.sidebar.header("🔧 Select Signal Parameters")
 subject = st.sidebar.selectbox("Subject", [f"sub{str(i).zfill(2)}" for i in range(1, 11)])
-level = st.sidebar.selectbox("Noise Level", [f"l{i}" for i in range(1, 6)])
+level = st.sidebar.selectbox("Level", [f"l{i}" for i in range(1, 6)])
 signal_type = st.sidebar.selectbox("Signal Type", ["fecg", "mecg"])
 
 # Construct file path
@@ -110,18 +110,57 @@ with col2:
         }
     }
 
-    for key, value in features.items():
-        norm = info.get(key, {})
-        if signal_type == "fecg":
-            normal_range = norm.get("normal_fetal", "-")
+    # Show metrics with abnormal flagging
+flags = []
+for key, value in features.items():
+    norm = info.get(key, {})
+    if signal_type == "fecg":
+        normal_range = norm.get("normal_fetal", "-")
+        if key == "ECG_Rate_Mean":
+            abnormal = value < 110 or value > 160
+        elif key == "ECG_QRS_Duration":
+            abnormal = value < 50 or value > 80
+        elif key == "ECG_QT_Interval":
+            abnormal = value < 140 or value > 220
+        elif key == "HRV_SDNN":
+            abnormal = value > 20
+        elif key == "HRV_RMSSD":
+            abnormal = value < 5 or value > 25
+        elif key == "HRV_pNN50":
+            abnormal = value > 10
         else:
-            normal_range = norm.get("normal_maternal", "-")
+            abnormal = False
+    else:  # mecg
+        normal_range = norm.get("normal_maternal", "-")
+        if key == "ECG_Rate_Mean":
+            abnormal = value < 60 or value > 100
+        elif key == "ECG_QRS_Duration":
+            abnormal = value > 120
+        elif key == "ECG_QT_Interval":
+            abnormal = value > 450
+        elif key == "HRV_SDNN":
+            abnormal = value < 30 or value > 50
+        elif key == "HRV_RMSSD":
+            abnormal = value < 20 or value > 50
+        elif key == "HRV_pNN50":
+            abnormal = value < 30
+        else:
+            abnormal = False
 
-        st.markdown(f"""
-        **{key}:** {value:.2f}  
-        _{norm.get("desc", "No description available.")}_  
-        **Expected ({signal_type.upper()}):** {normal_range}
-        """)
+    flags.append(abnormal)
+
+    color = "🟢" if not abnormal else "🔴"
+    st.markdown(f"""
+    **{color} {key}:** {value:.2f}  
+    _{norm.get("desc", "No description available.")}_  
+    **Expected ({signal_type.upper()}):** {normal_range}
+    """)
+    # Summary alert
+    if any(flags):
+        st.error("⚠️ Some metrics are outside the normal range. This signal may need clinical review.")
+    else:
+        st.success("✅ All metrics are within expected physiological ranges.")
+
 
 # Footer
 st.markdown("---")

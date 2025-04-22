@@ -1,0 +1,14 @@
+{
+    "ECG_Rate_Mean": 59.70728225895822,
+    "HRV_SDNN": 32.46936578160581,
+    "HRV_RMSSD": 45.499628748114155,
+    "HRV_pNN50": 28.619528619528616,
+    "ECG_QRS_Duration": 74.28956228956228,
+    "ECG_QT_Interval": 155.77027027027026,
+    "ECG_PR_Interval": 59.333333333333336,
+    "Flags": [
+        "Maternal bradycardia (HR < 60 bpm)"
+    ],
+    "subject_type": "maternal",
+    "filename": "sub07_l1_c0_combined_cleaned_mecg.npy"
+}

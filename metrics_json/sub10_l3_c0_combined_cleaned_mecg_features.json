@@ -1,0 +1,16 @@
+{
+    "ECG_Rate_Mean": 36.01987881273431,
+    "HRV_SDNN": 92.37420383753269,
+    "HRV_RMSSD": 128.661213522835,
+    "HRV_pNN50": 68.15642458100558,
+    "ECG_QRS_Duration": 178.2709677419355,
+    "ECG_QT_Interval": NaN,
+    "ECG_PR_Interval": 134.7482993197279,
+    "Flags": [
+        "Could not calculate QT Interval - insufficient peak matching",
+        "Maternal bradycardia (HR < 60 bpm)",
+        "Wide QRS complex (> 120 ms)"
+    ],
+    "subject_type": "maternal",
+    "filename": "sub10_l3_c0_combined_cleaned_mecg.npy"
+}

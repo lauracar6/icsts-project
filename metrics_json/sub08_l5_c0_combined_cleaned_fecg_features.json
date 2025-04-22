@@ -1,0 +1,15 @@
+{
+    "ECG_Rate_Mean": 93.49645431971986,
+    "HRV_SDNN": 19.861141475219746,
+    "HRV_RMSSD": 28.211185153090174,
+    "HRV_pNN50": 7.510729613733906,
+    "ECG_QRS_Duration": 120.63519313304721,
+    "ECG_QT_Interval": 28.489795918367346,
+    "ECG_PR_Interval": 46.32727272727273,
+    "Flags": [
+        "Fetal bradycardia (HR < 110 bpm)",
+        "Prolonged QRS duration (Possible conduction issue)"
+    ],
+    "subject_type": "fetal",
+    "filename": "sub08_l5_c0_combined_cleaned_fecg.npy"
+}

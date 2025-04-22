@@ -1,0 +1,14 @@
+{
+    "ECG_Rate_Mean": 88.13686785348023,
+    "HRV_SDNN": 16.54030461968689,
+    "HRV_RMSSD": 21.948049912854877,
+    "HRV_pNN50": 1.5945330296127564,
+    "ECG_QRS_Duration": 167.0054054054054,
+    "ECG_QT_Interval": -188.0,
+    "ECG_PR_Interval": 150.5537757437071,
+    "Flags": [
+        "Wide QRS complex (> 120 ms)"
+    ],
+    "subject_type": "maternal",
+    "filename": "sub09_l4_c0_combined_cleaned_mecg.npy"
+}

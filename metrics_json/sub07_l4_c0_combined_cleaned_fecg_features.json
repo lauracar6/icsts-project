@@ -1,0 +1,12 @@
+{
+    "ECG_Rate_Mean": 115.70444488414407,
+    "HRV_SDNN": 27.80440221635228,
+    "HRV_RMSSD": 49.54864101150461,
+    "HRV_pNN50": 36.97916666666667,
+    "ECG_QRS_Duration": 52.02777777777778,
+    "ECG_QT_Interval": 176.27586206896552,
+    "ECG_PR_Interval": 93.74193548387096,
+    "Flags": [],
+    "subject_type": "fetal",
+    "filename": "sub07_l4_c0_combined_cleaned_fecg.npy"
+}

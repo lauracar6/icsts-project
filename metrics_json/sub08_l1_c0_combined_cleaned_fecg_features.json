@@ -1,0 +1,15 @@
+{
+    "ECG_Rate_Mean": 93.48827147858381,
+    "HRV_SDNN": 20.333869334118504,
+    "HRV_RMSSD": 28.917085770567642,
+    "HRV_pNN50": 9.2274678111588,
+    "ECG_QRS_Duration": 84.64377682403433,
+    "ECG_QT_Interval": NaN,
+    "ECG_PR_Interval": 58.14592274678112,
+    "Flags": [
+        "Could not calculate QT Interval - insufficient peak matching",
+        "Fetal bradycardia (HR < 110 bpm)"
+    ],
+    "subject_type": "fetal",
+    "filename": "sub08_l1_c0_combined_cleaned_fecg.npy"
+}

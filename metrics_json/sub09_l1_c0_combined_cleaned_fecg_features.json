@@ -1,0 +1,14 @@
+{
+    "ECG_Rate_Mean": 160.12357135051607,
+    "HRV_SDNN": 7.79367461953485,
+    "HRV_RMSSD": 11.619220005048595,
+    "HRV_pNN50": 0.0,
+    "ECG_QRS_Duration": 76.94235588972431,
+    "ECG_QT_Interval": 144.99062918340027,
+    "ECG_PR_Interval": 84.01002506265664,
+    "Flags": [
+        "Fetal tachycardia (HR > 160 bpm)"
+    ],
+    "subject_type": "fetal",
+    "filename": "sub09_l1_c0_combined_cleaned_fecg.npy"
+}

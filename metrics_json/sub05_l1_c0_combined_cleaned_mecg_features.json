@@ -1,0 +1,12 @@
+{
+    "ECG_Rate_Mean": 97.79385480399488,
+    "HRV_SDNN": 12.222276829506642,
+    "HRV_RMSSD": 17.532369593779823,
+    "HRV_pNN50": 0.6147540983606558,
+    "ECG_QRS_Duration": 114.12295081967213,
+    "ECG_QT_Interval": 198.8235294117647,
+    "ECG_PR_Interval": 37.26229508196721,
+    "Flags": [],
+    "subject_type": "maternal",
+    "filename": "sub05_l1_c0_combined_cleaned_mecg.npy"
+}

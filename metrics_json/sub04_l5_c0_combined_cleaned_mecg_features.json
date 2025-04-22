@@ -1,0 +1,14 @@
+{
+    "ECG_Rate_Mean": 68.556431283076,
+    "HRV_SDNN": 25.3057808157444,
+    "HRV_RMSSD": 34.306576286050294,
+    "HRV_pNN50": 15.835777126099707,
+    "ECG_QRS_Duration": 92.89411764705882,
+    "ECG_QT_Interval": NaN,
+    "ECG_PR_Interval": 62.97922848664688,
+    "Flags": [
+        "Could not calculate QT Interval - insufficient peak matching"
+    ],
+    "subject_type": "maternal",
+    "filename": "sub04_l5_c0_combined_cleaned_mecg.npy"
+}
