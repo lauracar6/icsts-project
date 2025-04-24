@@ -1,14 +1,10 @@
 {
-    "ECG_Rate_Mean": 97.78507029863104,
-    "HRV_SDNN": 12.60437415515334,
-    "HRV_RMSSD": 17.69703888183515,
-    "HRV_pNN50": 0.0,
-    "ECG_QRS_Duration": 57.70841889117043,
-    "ECG_QT_Interval": NaN,
-    "ECG_PR_Interval": 86.46406570841889,
-    "Flags": [
-        "Could not calculate QT Interval - insufficient peak matching"
-    ],
+    "Heart_Rate_Mean": 97.78507029863104,
+    "PR_Interval_ms": 86.27515400410678,
+    "QRS_Duration_ms": 57.79876796714579,
+    "QT_Interval_ms": 242.17659137577002,
+    "Sinus_Rhythm": true,
+    "Quality_OK": true,
     "subject_type": "maternal",
     "filename": "sub05_l5_c0_combined_cleaned_mecg.npy"
 }

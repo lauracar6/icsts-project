@@ -1,12 +1,10 @@
 {
-    "ECG_Rate_Mean": 97.79201981258544,
-    "HRV_SDNN": 12.489944789317764,
-    "HRV_RMSSD": 17.311732973986988,
-    "HRV_pNN50": 1.0245901639344261,
-    "ECG_QRS_Duration": 114.08196721311475,
-    "ECG_QT_Interval": 198.66666666666666,
-    "ECG_PR_Interval": 37.13934426229508,
-    "Flags": [],
+    "Heart_Rate_Mean": 97.79201920751073,
+    "PR_Interval_ms": 37.204918032786885,
+    "QRS_Duration_ms": 114.07377049180327,
+    "QT_Interval_ms": 273.319587628866,
+    "Sinus_Rhythm": true,
+    "Quality_OK": true,
     "subject_type": "maternal",
     "filename": "sub05_l4_c0_combined_cleaned_mecg.npy"
 }

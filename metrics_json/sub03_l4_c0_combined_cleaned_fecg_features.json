@@ -1,12 +1,10 @@
 {
-    "ECG_Rate_Mean": 137.177403021056,
-    "HRV_SDNN": 9.722647666493772,
-    "HRV_RMSSD": 13.906190622457009,
-    "HRV_pNN50": 0.0,
-    "ECG_QRS_Duration": 47.88304093567251,
-    "ECG_QT_Interval": 174.1345029239766,
-    "ECG_PR_Interval": 104.81871345029239,
-    "Flags": [],
+    "Heart_Rate_Mean": 137.17728826806984,
+    "PR_Interval_ms": 106.0701754385965,
+    "QRS_Duration_ms": 49.15204678362573,
+    "QT_Interval_ms": 174.4093567251462,
+    "Sinus_Rhythm": true,
+    "Quality_OK": true,
     "subject_type": "fetal",
     "filename": "sub03_l4_c0_combined_cleaned_fecg.npy"
 }

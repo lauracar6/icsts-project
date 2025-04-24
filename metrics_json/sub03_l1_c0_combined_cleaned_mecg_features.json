@@ -1,14 +1,10 @@
 {
-    "ECG_Rate_Mean": 77.32744126586005,
-    "HRV_SDNN": 19.793725229010292,
-    "HRV_RMSSD": 25.277625152164383,
-    "HRV_pNN50": 5.714285714285714,
-    "ECG_QRS_Duration": 144.61298701298702,
-    "ECG_QT_Interval": 198.1,
-    "ECG_PR_Interval": 43.92727272727273,
-    "Flags": [
-        "Wide QRS complex (> 120 ms)"
-    ],
+    "Heart_Rate_Mean": 77.3273119821614,
+    "PR_Interval_ms": 43.896103896103895,
+    "QRS_Duration_ms": 144.66493506493507,
+    "QT_Interval_ms": 296.4779220779221,
+    "Sinus_Rhythm": true,
+    "Quality_OK": true,
     "subject_type": "maternal",
     "filename": "sub03_l1_c0_combined_cleaned_mecg.npy"
 }

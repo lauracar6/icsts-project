@@ -1,15 +1,10 @@
 {
-    "ECG_Rate_Mean": 112.916291537811,
-    "HRV_SDNN": 14.122185273101188,
-    "HRV_RMSSD": 20.16727203193244,
-    "HRV_pNN50": 2.4866785079928952,
-    "ECG_QRS_Duration": 138.81349911190054,
-    "ECG_QT_Interval": NaN,
-    "ECG_PR_Interval": 86.0177619893428,
-    "Flags": [
-        "Could not calculate QT Interval - insufficient peak matching",
-        "Prolonged QRS duration (Possible conduction issue)"
-    ],
+    "Heart_Rate_Mean": 112.9155433411835,
+    "PR_Interval_ms": 85.74067495559503,
+    "QRS_Duration_ms": 139.03374777975134,
+    "QT_Interval_ms": 748.0,
+    "Sinus_Rhythm": true,
+    "Quality_OK": true,
     "subject_type": "fetal",
     "filename": "sub04_l1_c0_combined_cleaned_fecg.npy"
 }

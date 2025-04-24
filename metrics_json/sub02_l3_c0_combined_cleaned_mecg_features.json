@@ -1,14 +1,10 @@
 {
-    "ECG_Rate_Mean": 105.15727912640932,
-    "HRV_SDNN": 10.674361639434958,
-    "HRV_RMSSD": 15.995219171017066,
-    "HRV_pNN50": 0.0,
-    "ECG_QRS_Duration": 45.33587786259542,
-    "ECG_QT_Interval": 144.4,
-    "ECG_PR_Interval": 132.0,
-    "Flags": [
-        "Maternal tachycardia (HR > 100 bpm)"
-    ],
+    "Heart_Rate_Mean": 105.15919540712018,
+    "PR_Interval_ms": 146.0,
+    "QRS_Duration_ms": 43.11281070745698,
+    "QT_Interval_ms": 285.0478011472275,
+    "Sinus_Rhythm": false,
+    "Quality_OK": true,
     "subject_type": "maternal",
     "filename": "sub02_l3_c0_combined_cleaned_mecg.npy"
 }
