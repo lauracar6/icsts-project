@@ -1,0 +1,21 @@
+=== Analysis: a05 ===
+Sampling Frequency: 1000 Hz
+True HR (from annotation): 129.0 bpm
+
+--- Component 1 ---
+Estimated HR: 88.6 bpm
+Correlation with original signal: r = -0.120
+
+--- Component 2 ---
+Estimated HR: 113.0 bpm
+Correlation with original signal: r = -0.074
+
+--- Component 3 ---
+Estimated HR: 120.5 bpm
+Correlation with original signal: r = 0.013
+
+--- Component 4 ---
+Estimated HR: 118.9 bpm
+Correlation with original signal: r = 0.990
+
+Selected Component: 4

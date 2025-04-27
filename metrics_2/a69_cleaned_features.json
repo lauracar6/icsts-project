@@ -1,0 +1,10 @@
+{
+    "Heart_Rate_Mean": NaN,
+    "PR_Interval_ms": NaN,
+    "QRS_Duration_ms": NaN,
+    "QT_Interval_ms": NaN,
+    "Sinus_Rhythm": false,
+    "Quality_OK": false,
+    "subject_type": "fetal",
+    "filename": "a69_cleaned.npy"
+}

@@ -1,0 +1,21 @@
+=== Analysis: a66 ===
+Sampling Frequency: 1000 Hz
+True HR (from annotation): 130.0 bpm
+
+--- Component 1 ---
+Estimated HR: 116.9 bpm
+Correlation with original signal: r = 0.342
+
+--- Component 2 ---
+Estimated HR: 120.4 bpm
+Correlation with original signal: r = -0.033
+
+--- Component 3 ---
+Estimated HR: 112.4 bpm
+Correlation with original signal: r = 0.535
+
+--- Component 4 ---
+Estimated HR: 113.9 bpm
+Correlation with original signal: r = 0.772
+
+Selected Component: 4

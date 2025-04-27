@@ -1,0 +1,10 @@
+{
+    "Heart_Rate_Mean": 56.34704935343709,
+    "PR_Interval_ms": 162.75925925925927,
+    "QRS_Duration_ms": 149.23502304147465,
+    "QT_Interval_ms": 280.2027649769585,
+    "Sinus_Rhythm": false,
+    "Quality_OK": true,
+    "subject_type": "fetal",
+    "filename": "a14_cleaned.npy"
+}

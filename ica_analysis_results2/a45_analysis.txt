@@ -1,0 +1,21 @@
+=== Analysis: a45 ===
+Sampling Frequency: 1000 Hz
+True HR (from annotation): 142.3 bpm
+
+--- Component 1 ---
+Estimated HR: 94.6 bpm
+Correlation with original signal: r = 0.049
+
+--- Component 2 ---
+Estimated HR: 116.7 bpm
+Correlation with original signal: r = 0.344
+
+--- Component 3 ---
+Estimated HR: 95.6 bpm
+Correlation with original signal: r = -0.320
+
+--- Component 4 ---
+Estimated HR: 110.6 bpm
+Correlation with original signal: r = 0.881
+
+Selected Component: 4

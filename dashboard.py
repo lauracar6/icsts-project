@@ -18,13 +18,13 @@ METRIC_INFO = {
         "desc": "Average heart rate over the signal."
     },
     "PR_Interval_ms": {
-        "range_fetal": "80-120 ms",
+        "range_fetal": "110-130 ms",
         "range_maternal": "120-200 ms",
         "desc": "Time from onset of P wave to start of QRS complex."
     },
     "QRS_Duration_ms": {
-        "range_fetal": "40-80 ms",
-        "range_maternal": "80-100 ms",
+        "range_fetal": "40-60 ms",
+        "range_maternal": "60-120 ms",
         "desc": "Duration of ventricular depolarization."
     },
     "QT_Interval_ms": {
