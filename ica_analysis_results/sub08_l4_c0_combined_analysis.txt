@@ -5,23 +5,23 @@ True Maternal HR: 83.3 bpm
 
 --- Component 1 ---
 Estimated HR: 111.5 bpm
-Correlation with Fetal ECG:    r = -0.004
-Correlation with Maternal ECG: r = -0.002
+Correlation with Fetal ECG:    r = -0.004, p = 3.028e-01
+Correlation with Maternal ECG: r = -0.002, p = 6.379e-01
 
 --- Component 2 ---
 Estimated HR: 83.5 bpm
-Correlation with Fetal ECG:    r = 0.001
-Correlation with Maternal ECG: r = -1.000
+Correlation with Fetal ECG:    r = 0.001, p = 7.089e-01
+Correlation with Maternal ECG: r = -1.000, p = 0.000e+00
 
 --- Component 3 ---
 Estimated HR: 112.6 bpm
-Correlation with Fetal ECG:    r = 0.003
-Correlation with Maternal ECG: r = 0.006
+Correlation with Fetal ECG:    r = 0.003, p = 4.051e-01
+Correlation with Maternal ECG: r = 0.006, p = 1.069e-01
 
 --- Component 4 ---
 Estimated HR: 93.5 bpm
-Correlation with Fetal ECG:    r = -1.000
-Correlation with Maternal ECG: r = 0.001
+Correlation with Fetal ECG:    r = -1.000, p = 0.000e+00
+Correlation with Maternal ECG: r = 0.001, p = 8.052e-01
 
 Selected Fetal Component:    4
 Selected Maternal Component: 2
