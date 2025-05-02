@@ -27,21 +27,7 @@ METRIC_INFO = {
         "range_maternal": "60-120 ms",
         "desc": "Duration of ventricular depolarization."
     },
-    "QT_Interval_ms": {
-        "range_fetal": "250-400 ms",
-        "range_maternal": "350-450 ms",
-        "desc": "Time from start of Q wave to end of T wave."
-    },
-    "Sinus_Rhythm": {
-        "range_fetal": "True",
-        "range_maternal": "True",
-        "desc": "Indicates if rhythm originates from sinus node."
-    },
-    "Quality_OK": {
-        "range_fetal": "True",
-        "range_maternal": "True",
-        "desc": "Whether the signal passed quality checks."
-    }
+    
 }
 
 # --- Extract all filenames ---
@@ -113,18 +99,13 @@ if matching_files:
             if key in METRIC_INFO:
                 st.markdown(f"**{key.replace('_', ' ')}**: `{value}`")
 
-                # Show healthy range unless it's for Sinus_Rhythm or Quality_OK
-                if key not in ["Sinus_Rhythm", "Quality_OK"]:
-                    range_key = "range_fetal" if subject_type == "fetal" else "range_maternal"
-                    st.markdown(f"- 🟢 *Healthy Range* ({subject_type}): `{METRIC_INFO[key][range_key]}`")
+                # Show healthy range
+                range_key = "range_fetal" if subject_type == "fetal" else "range_maternal"
+                st.markdown(f"- 🟢 *Healthy Range* ({subject_type}): `{METRIC_INFO[key][range_key]}`")
 
-                # Show description unless it's Quality_OK
-                if key != "Quality_OK":
-                    st.markdown(f"- {METRIC_INFO[key]['desc']}")
+                # Show description
+                st.markdown(f"- {METRIC_INFO[key]['desc']}")
 
-               
-
-             
     else:
         st.warning("Metrics file not found.")
 else:

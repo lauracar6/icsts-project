@@ -1,0 +1,7 @@
+{
+    "Heart_Rate_Mean": 105.14991071202192,
+    "PR_Interval_ms": 122.43883495145631,
+    "QRS_Duration_ms": 43.030534351145036,
+    "subject_type": "maternal",
+    "filename": "sub02_l2_cleaned_mecg.npy"
+}

@@ -1,5 +1,0 @@
-sub06_l2_c0_combined 4 250 75000
-sub06_l2_c0_combined.dat 16 355506.7873303167(-6578)/mV 16 0 -8711 16851 0 fecg
-sub06_l2_c0_combined.dat 16 37576.21621621621(-21181)/mV 16 0 -21419 14122 0 mecg
-sub06_l2_c0_combined.dat 16 98301000.0(0)/mV 16 0 0 0 0 noise1
-sub06_l2_c0_combined.dat 16 22654.814130685754(-61)/mV 16 0 2945 9795 0 noise2

@@ -1,0 +1,7 @@
+{
+    "Heart_Rate_Mean": 113.81547499692202,
+    "PR_Interval_ms": 96.39076376554173,
+    "QRS_Duration_ms": 47.647887323943664,
+    "subject_type": "fetal",
+    "filename": "sub05_l5_cleaned_fecg.npy"
+}

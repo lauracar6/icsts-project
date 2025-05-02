@@ -1,0 +1,17 @@
+=== Analysis: sub09_l1 ===
+Sampling Frequency: 250 Hz
+True Fetal HR:    160.1 bpm
+True Maternal HR: 88.1 bpm
+
+--- Component 1 ---
+Estimated HR: 88.2 bpm
+Correlation with Fetal ECG:    r = -0.012, p = 6.210e-04
+Correlation with Maternal ECG: r = -0.995, p = 0.000e+00
+
+--- Component 2 ---
+Estimated HR: 95.9 bpm
+Correlation with Fetal ECG:    r = 0.978, p = 0.000e+00
+Correlation with Maternal ECG: r = 0.003, p = 4.306e-01
+
+Selected Fetal Component:    2
+Selected Maternal Component: 1
