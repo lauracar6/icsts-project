@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 SIGNAL_DIR = "ica_cleaned_signals"
 FEATURES_DIR = "metrics_json"
 fs = 250
-duration = 5
+duration = 5  # seconds of signal to show
 
 # --- Metric Info ---
 METRIC_INFO = {
@@ -27,31 +27,30 @@ METRIC_INFO = {
         "range_maternal": "60-120 ms",
         "desc": "Duration of ventricular depolarization."
     },
-    
 }
 
-# --- Extract all filenames ---
+# --- Get filenames ---
 files = [f for f in os.listdir(SIGNAL_DIR) if f.endswith(".npy")]
 
-# --- Parse metadata from filenames ---
+# --- Parse subjects and levels ---
 parsed = []
 for f in files:
     parts = f.split("_")
-    if len(parts) >= 6:
+    if len(parts) >= 4:
         subject = parts[0]       # sub01
         level = parts[1]         # l1
-        signal_type = parts[-1].replace(".npy", "")  # fecg or mecg
+        signal_type = parts[3]   # fecg or mecg (from sub01_l1_cleaned_fecg.npy)
         parsed.append((subject, level, signal_type, f))
 
 subjects = sorted(set(p[0] for p in parsed))
 levels = sorted(set(p[1] for p in parsed))
-types = sorted(set(p[2] for p in parsed))
+types = sorted(set(p[2] for p in parsed))  # 'fecg' or 'mecg'
 
 # --- Streamlit UI ---
 st.title("🫀 ECG Signal Dashboard")
 
 selected_subject = st.selectbox("Select Subject", subjects)
-selected_level = st.selectbox("Select Level", levels)
+selected_level = st.selectbox("Select Repetition", levels)
 selected_type = st.selectbox("Select Signal Type", types)
 
 # --- Match file ---
@@ -61,52 +60,43 @@ if matching_files:
     filename = matching_files[0][3]
     signal_path = os.path.join(SIGNAL_DIR, filename)
 
+    # Load and crop signal
     signal = np.load(signal_path)
     cropped = signal[:fs * duration]
     time = np.arange(len(cropped)) / fs
 
-    # Plot ECG
-    st.subheader("📈 ECG Plot (first 5 seconds)")
-    duration_sec = 3  # Show 3 seconds for better peak visibility
-    samples_to_plot = fs * duration_sec
-    time_axis = np.arange(samples_to_plot) / fs
-
+    # --- Plot ECG ---
+    st.subheader("📈 ECG Plot (First 5 Seconds)")
     fig, ax = plt.subplots(figsize=(12, 4))
-    ax.plot(time_axis, signal[:samples_to_plot], color="blue", linewidth=1.5)
-
-    ax.set_title("ECG Signal (First 3 Seconds)", fontsize=14)
+    ax.plot(time, cropped, color="blue", linewidth=1.5)
+    ax.set_title("ECG Signal", fontsize=14)
     ax.set_xlabel("Time (s)")
     ax.set_ylabel("Amplitude (a.u.)")
-
-    # Add grid like ECG paper
     ax.grid(which='both', linestyle='--', linewidth=0.5)
     ax.set_facecolor("#f9f9f9")
-
     st.pyplot(fig)
 
-    # Load and show metrics
+    # --- Load metrics ---
     metrics_filename = filename.replace(".npy", "_features.json")
     metrics_path = os.path.join(FEATURES_DIR, metrics_filename)
 
     if os.path.exists(metrics_path):
-        with open(metrics_path, "r") as f:
-            features = json.load(f)
+        try:
+            with open(metrics_path, "r") as f:
+                features = json.load(f)
 
-        subject_type = features.get("subject_type", "fetal" if "fecg" in filename else "maternal")
+            subject_type = "fetal" if selected_type == "fecg" else "maternal"
 
-        st.subheader("ECG Metrics")
-        for key, value in features.items():
-            if key in METRIC_INFO:
-                st.markdown(f"**{key.replace('_', ' ')}**: `{value}`")
-
-                # Show healthy range
-                range_key = "range_fetal" if subject_type == "fetal" else "range_maternal"
-                st.markdown(f"- 🟢 *Healthy Range* ({subject_type}): `{METRIC_INFO[key][range_key]}`")
-
-                # Show description
-                st.markdown(f"- {METRIC_INFO[key]['desc']}")
-
+            st.subheader("📊 ECG Metrics")
+            for key, value in features.items():
+                if key in METRIC_INFO:
+                    st.markdown(f"**{key.replace('_', ' ')}**: `{value}`")
+                    range_key = "range_fetal" if subject_type == "fetal" else "range_maternal"
+                    st.markdown(f"- 🟢 *Healthy Range* ({subject_type}): `{METRIC_INFO[key][range_key]}`")
+                    st.markdown(f"- {METRIC_INFO[key]['desc']}")
+        except Exception as e:
+            st.error(f"⚠️ Could not load metrics: {e}")
     else:
-        st.warning("Metrics file not found.")
+        st.warning("⚠️ Metrics file not found.")
 else:
-    st.warning("No matching file found for the selected combination.")
+    st.warning("⚠️ No matching file found for the selected combination.")
